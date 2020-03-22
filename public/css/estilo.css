@@ -1,0 +1,825 @@
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    #sectionGrande {
+      display: none;
+    }
+
+    #navMedio {
+      display: none;
+    }
+
+    #navGrande {
+      display: none;
+    }
+
+    section ul li div.media-body p {
+      font-size: 16px;
+    }
+
+    #listaEsportes div img {
+      width: 65px;
+    }
+
+    #perfil01 {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #perfil02 {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #perfil03 {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #local01 {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #local02 {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #local03 {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    #pesquisaGrande {
+      display: none;
+    }
+
+    #pesquisaMedio {
+      display: none;
+    }
+
+    #pesquisaPequeno {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #pesquisaPequeno p {
+      font-size: 12px;
+    }
+
+    #addPartida {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #addLocal {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #editarPerfil01 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+  
+    #editarPerfil02 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+  
+    #editarLocal01 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+  
+    #editarLocal02 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #footerPequeno {
+      display: flex;
+      align-content: center;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    #footerPequeno nav ul li button {
+      font-size: 12px;
+    }
+
+    #listaEsportes {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: 13px;
+      font-size: 9.25px;
+    }
+
+    .icone {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+
+    .iconeAddLocal {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #navPequeno {
+      display: none;
+    }
+
+    #navGrande {
+      display: none;
+    }
+
+    /* #navMedio {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  
+    #navMedio ul li {
+      font-size: 18px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    } */
+  
+    #navMedio a img {
+      width: 120px;
+      height: 60px;
+    }
+
+    #listaEsportes div img {
+      width: 75px;
+    }
+
+    #perfil01 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+  
+
+    #perfil02 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #perfil03 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #local01 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #local02 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #local03 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #pesquisaGrande {
+      display: none;
+    }
+
+    #pesquisaMedio {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    #pesquisaMedio p {
+      font-size: 12px;
+    }
+
+    #pesquisaPequeno {
+      display: none;
+    }
+
+    #addPartida {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0.10rem;
+      margin-right: 0.10rem;
+    }
+
+    #addLocal {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0.10rem;
+      margin-right: 0.10rem;
+    }
+
+    #editarPerfil01 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0.10rem;
+      margin-right: 0.10rem;
+    }
+  
+    #editarPerfil02 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0.10rem;
+      margin-right: 0.10rem;
+    }
+  
+    #editarLocal01 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0.10rem;
+      margin-right: 0.10rem;
+    }
+  
+    #editarLocal02 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      margin-left: 0.10rem;
+      margin-right: 0.10rem;
+    }
+
+    #listaEsportes {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: 13px;
+      font-size: 10.5px;
+    }
+
+    .icone {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .iconeAddLocal {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1999px) {
+  #navPequeno {
+    display: none;
+  }
+
+  #navMedio {
+    display: none;
+  }
+
+  #navGrande {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  #navGrande ul li {
+    font-size: 22px;
+  }
+
+  #navGrande a img {
+    width: 120px;
+    height: 60px;
+  }
+
+  #listaEsportes div img {
+    width: 85px;
+  }
+
+  #perfil01 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  #perfil02 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  #perfil03 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  #local01 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  #local02 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  #local03 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  #pesquisaGrande {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #pesquisaMedio {
+    display: none;
+  }
+
+  #pesquisaPequeno {
+    display: none;
+  }
+
+  #addPartida {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #addLocal {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #editarPerfil01 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #editarPerfil02 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #editarLocal01 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #editarLocal02 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 0.10rem;
+    margin-right: 0.10rem;
+  }
+
+  #listaEsportes {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .icone {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .iconeAddLocal {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  #navPequeno {
+    display: none;
+  }
+
+  #navGrande {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  #navGrande ul li {
+    font-size: 22px;
+  }
+
+  #navGrande a img {
+    width: 150px;
+    height: 70px;
+  }
+
+  #feed {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #perfil01 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #perfil01 div img {
+    width: 300px;
+  }
+
+  #perfil02 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #perfil03 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #local01 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #local02 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #local03 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #pesquisaGrande {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #pesquisaMedio {
+    display: none;
+  }
+
+  #pesquisaPequeno {
+    display: none;
+  }
+
+  #addPartida {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  #addLocal {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  #editarPerfil01 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #editarPerfil02 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  #editarLocal01 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  #editarLocal02 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  #listaEsportes {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .icone {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .iconeAddLocal {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+
+
+
+
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+  header {
+   
+    color: white;
+    list-style-type: none;
+    background-color: black;
+  }
+
+  main {
+    padding: 0px;
+    margin: 0px;
+    align-content: center;
+  }
+  
+  section {
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+  div.modal{
+    color:black;
+  }
+
+  
+ ul li a { 
+     color: white; 
+     text-decoration:none
+        } 
+
+li.titulo{
+    list-style-type: none;    
+    color: white;
+    display: inline;
+    
+    padding: 2px 10px;
+    font-size: 30px;
+    border-bottom:3px solid #EDEDED;
+}
+
+/* li.nav-item{
+
+  margin-right: 10px;
+} */
+ 
+section{
+  background-color: black;
+  padding: 30px;
+}
+
+div.media-body h2{
+color:white;
+
+}
+
+
+
+div.media-body p{
+    color:rgb(87, 79, 79);
+    font-size: 18px;
+    font-weight: bolder;
+    }
+
+#carouselExampleControls{
+    width:100%;
+}
+
+
+section.participe h1.center{
+  text-align: center;
+  color: white;  
+  text-transform: uppercase;
+  font-size: 15px;
+ }
+
+section.participe h2{
+  text-align: center;
+  color: white;
+  
+ 
+  font-size: 2.1em;
+ }
+
+ section.participe p{
+  text-align: center;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1em;
+ }
+
+ section.features{
+  text-align: center;
+  background-color: rgb(148, 148, 148);
+  color:black;
+ }
+
+ section.features h1 {  
+  font-size: 2.1em;
+ }
+
+
+ section.depoimentos{
+   background-color: black;
+   text-align: center;
+   color: white;
+   
+ }
+
+ section div.card-deck{
+  text-align: center;
+  color: black;
+  margin: 0 15% 0 15%;
+}
+
+div.card {
+  box-shadow: 10px 10px 10px rgb(58, 57, 57);
+}
+
+img.card-img-top {
+  padding: 10%;
+  border-radius: 100%;
+  
+}
+
+footer{
+  background-color: gray;
+  text-align: center;
+  color: black;
+  
+}
+
+section.form-contato{
+  /* margin:0 auto; */
+  /* text-align: center; */
+  /* border: white solid; */
+  color: white;
+  /* height: 63vh; */
+}
+
+section.contact-text{
+  color: white;
+  font-weight: bolder;
+}
+
+#listaEsportes img {
+  transition: all 0.8s ease-in-out;
+}
+
+#listaEsportes img:hover {
+  transform: rotate(-180deg);
+}
+
+#listaFooter {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#button1 {
+  font-size: 12px;
+}
+
+#cp {
+  font-size: 12px;
+}
