@@ -18,7 +18,7 @@ class Local extends Model
     // }
 
     public function getImagemImageAttribute($value){
-        return $this->imagem == null ? asset('img/null.png') : asset($this->imagem);
+        return $this->imagem == null ? asset('img/sem_imagem.jpg') : asset($this->imagem);
     }
 }
 

@@ -66,6 +66,44 @@
                                 </div>
                             </div>
 
+
+                            <div class="form-group row">
+                                <label for="bairro_user" class="col-md-4 col-form-label text-md-right">{{ __('Bairro') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="bairro_user" type="text" class="form-control" name="bairro_user" required autocomplete="bairro_user"
+                                    class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+                                    value="{{ old('titulo') }}">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label for="local_trabalho" class="col-md-4 col-form-label text-md-right">{{ __('Local de Trabalho') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="local_trabalho" type="text" class="form-control" name="local_trabalho" required autocomplete="local_trabalho"
+                                    class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+                                    value="{{ old('titulo') }}">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label for="instituicao_ensino" class="col-md-4 col-form-label text-md-right">{{ __('Instituição de Ensino') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="instituicao_ensino" type="text" class="form-control" name="instituicao_ensino" required autocomplete="instituicao_ensino"
+                                    class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+                                    value="{{ old('titulo') }}">
+                                </div>
+                            </div>
+
+                            
+
+
+
+                            
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">

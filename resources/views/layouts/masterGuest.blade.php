@@ -42,8 +42,8 @@
 
 
 
-{{-- 
-                    <li class="nav-item">
+
+                    {{-- <li class="nav-item">
 
                         <!-- Botão para acionar modal -->
                         <button type="button" class="btn btn-primary btn-lg ml-5 mr-3" data-toggle="modal"

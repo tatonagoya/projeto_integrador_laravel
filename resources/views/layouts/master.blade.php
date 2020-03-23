@@ -32,7 +32,7 @@
                 </li>
     
     
-                <li class="nav-item">
+                {{-- <li class="nav-item">
     
                     <!-- Botão para acionar modal -->
                     <button type="button" class="btn btn-primary btn-lg ml-5 mr-3" data-toggle="modal"
@@ -216,7 +216,7 @@
                     </div>
     
     
-                </li>
+                </li> --}}
             </ul>
     
     
@@ -235,7 +235,7 @@
 @endguest
 
 
-{{-- @auth --}}
+@auth
     
     <!DOCTYPE html>
     <html lang="pt-br">
@@ -318,9 +318,11 @@
                                                         e conhecer novas pessoas através do esporte! <br><br>Primeiro, selecione as atividades que deseja praticar, 
                                                         depois pesquise as pessoas e lugares que prefere seguir. Então é só receber as notificações em seu feed, 
                                                         escolher uma partida e começar a se exercitar!</b></p>
-                                                    <a href="{{ route('editarPerfil') }}" class="btn btn-primary btn-block" style="font-size: 12px;"><i class="fas fa-address-card"></i> Editar Perfil</a>
+                                                    <a href="/editarPerfil/{$user->id}" class="btn btn-dark btn-block" style="font-size: 12px;"><i class="fas fa-address-card"></i> Editar Perfil</a>
                                                 </div>
                             
+
+                                                {{-- /editarPerfil/{{$local->id}} --}}
                             
                             
                                                 <div>
@@ -847,8 +849,11 @@
                                     e conhecer novas pessoas através do esporte! <br><br>Primeiro, selecione as atividades que deseja praticar, 
                                     depois pesquise as pessoas e lugares que prefere seguir. Então é só receber as notificações em seu feed, 
                                     escolher uma partida e começar a se exercitar!</b></p>
-                                <a href="{{ route('editarPerfil') }}" class="btn btn-secondary btn-block"><i class="fas fa-address-card"></i> Editar Perfil</a>
+                                <a href="/editarPerfil/{{Auth::user()->id}}" class="btn btn-dark btn-block"><i class="fas fa-address-card"></i> Editar Perfil</a>
                             </div>
+
+                            {{-- /editarPerfil/{$user->id} --}}
+                            {{-- /editarPerfil/{{$local->id}} --}}
 
 
                             <div>
@@ -1256,4 +1261,4 @@
 
     </html>
 
-{{-- @endauth --}}
+@endauth

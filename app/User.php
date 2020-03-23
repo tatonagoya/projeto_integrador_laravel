@@ -37,4 +37,56 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+
+
+    // public function profileUpdate(Request $request){
+    //     $data = $request->all();
+
+    //     if ($data['password'] != null){
+            
+    //         $data['password'] = bcrypt($data['password']);
+       
+    //     } else {
+    //         unset($data)['password'];
+    //     }
+
+    //     $update = auth()->user()->uptade($data);
+
+    //     if ($update){
+    //         return redirect()(
+    //                     ->route('home')
+    //                     ->with('success', 'Sucesso ao atualizar...');
+    //     } else {
+    //         return redirect()(
+    //                     ->back()
+    //                     ->with('error', 'Falha ao atualizar o perfil...');
+    //     }
+    
+    // }
+
+
+    // public function profileUpdate(Request $request){
+    //     $data = $request->all();
+
+    //     if ($data['password'] != null){
+            
+    //         $data['password'] = bcrypt($data['password']);
+       
+    //     } else {
+    //         unset($data)['password'];
+    //     }
+
+    //     $update = auth()->user()->uptade($data);
+
+    //     if ($update){
+    //         return redirect('/home')             
+    //     }
+    
+    // }
+
+
+
 }

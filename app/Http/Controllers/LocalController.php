@@ -10,23 +10,50 @@ class LocalController extends Controller
 {
     // listando filmes 
     public function index(){
-        $locais = Local::paginate(5);
+        $locais = Local::paginate(50);
 
         return view('listaLocais')->with('locais', $locais);
     }
 
-    public function index2(){
+    public function show($id, Request $request){
         $locais = Local::
         
         // find(id);
         
-        paginate(5);
+        paginate(50);
 
-        return view('local')->with('locais', $locais);
+       
+        // $request->validate([
+        //     'nome_local' => 'required|min:10',
+        //     'bairro' => 'required|min:5',
+        //     'endereco' => 'required|min:10',
+        //     'imagem' => 'nullable|min:2'
+        // ]);
 
+        // $local = Local::find($id);
+        // $arquivo = $request->file('imagem');
+    
+        // if(empty($arquivo)){
+        //     $caminhoRelativo = $local->imagem;
+        // } else {
+        //     $arquivo->storePublicly('uploads');
+        //     $caminhoAbsoluto = public_path()."/storage/uploads";
+        //     $nomeArquivo = $arquivo->getClientOriginalName();
+        //     $caminhoRelativo = "storage/uploads/$nomeArquivo";
+        //     $arquivo->move($caminhoAbsoluto, $nomeArquivo);
+        // }
+        
+
+        
+        return view('local', ['local' => Local::findOrfail($id)])->with('locais', $locais);
+
+       
         // return view('local')->with([
         //     'local' => $local ]);
     }
+
+
+   
 
     
 
@@ -49,7 +76,8 @@ class LocalController extends Controller
         $request->validate([
             'nome_local' => 'required|min:10',
             'bairro' => 'required|min:5',
-            'endereco' => 'required|min:10'
+            'endereco' => 'required|min:10',
+            'imagem' => 'nullable|min:3'
         ]);
 
         $arquivo = $request->file('imagem');
@@ -110,7 +138,7 @@ class LocalController extends Controller
         $arquivo = $request->file('imagem');
 
         if(empty($arquivo)){
-            $caminhoRelativo = $filme->imagem;
+            $caminhoRelativo = $local->imagem;
         } else {
             $arquivo->storePublicly('uploads');
             $caminhoAbsoluto = public_path()."/storage/uploads";
@@ -128,10 +156,19 @@ class LocalController extends Controller
         $local->save();
 
         return redirect('/listaLocais');
+
+        
     }
 
 
+    // excluindo filme
+    public function delete($id){
+        $local = Local::find($id);
 
+        $local->delete();
+
+        return redirect('/listaLocais');
+    }    
 
 
 

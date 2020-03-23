@@ -8,7 +8,7 @@
 
 
     <div class="flex my-4 col-md-6 col-lg-6 col-xl-6">
-        <img width="300px" src="{{ asset('img/quadra_ibirapuera.jpg')}}" alt="..." class="card-img">
+        <img width="300px" src="{{$local->imagem_image}}" alt="..." class="card-img">
         
     </div>
 
@@ -213,7 +213,7 @@
 
 
 
-        <button type="submit" class="form-control btn btn-primary btn-block">Salvar</button>
+        <button type="submit" class="form-control btn btn-dark btn-block">Salvar</button>
     </form>
 
 

@@ -26,8 +26,8 @@ Route::get('/contato', function () {
 
 
 Route::get('/home', function () {
-    return view('hpme');
-})->name('hpme');
+    return view('home');
+})->name('home');
 
 
 Route::get('/perfil', function () {
@@ -46,7 +46,7 @@ Route::get('/listaLocais', 'LocalController@index')->name('listaLocais');
 //     return view('locais');
 // })->name('locais');
 
-Route::get('/local/{id}', 'LocalController@index2');
+Route::get('/local/{id}', 'LocalController@show');
 
 
 // Route::get('/addLocal', function () {
@@ -65,9 +65,22 @@ Route::get('/addPartida', function () {
 })->name('addPartida');
 
 
-Route::get('/editarPerfil', function () {
-    return view('editarPerfil');
-})->name('editarPerfil');
+
+
+
+
+// Route::get('/editarPerfil', function () {
+//     return view('editarPerfil');
+// })->name('editarPerfil');
+
+// Route::get('editarPerfil/{user}',  ['as' => 'editarPerfil', 'uses' => 'UserController@edit']);
+// Route::patch('editarPerfil/{user}/update',  ['as' => 'editarPerfil.update', 'uses' => 'UserController@update']);
+
+Route::get('/editarPerfil/{user}', 'UserController@edit');
+Route::put('/editarPerfil/{user}', 'UserController@update');
+
+
+
 
 
 // Route::get('/editarLocal', function () {
@@ -76,6 +89,10 @@ Route::get('/editarPerfil', function () {
 
 Route::get('/editarLocal/{id}', 'LocalController@edit');
 Route::put('/editarLocal/{id}', 'LocalController@update');
+
+
+Route::delete('/exclui-local/{id}', 'LocalController@delete');
+
 
 
 Route::get('/pesquisa', function () {

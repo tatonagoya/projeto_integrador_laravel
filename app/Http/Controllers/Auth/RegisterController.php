@@ -64,9 +64,13 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \App\User
-     */
+     */  
+
     protected function create(array $data)
     {
+        // dd($request->all());
+        // die; 
+
         return User::create([
             'name' => $data['name'], 
             'email' => $data['email'],
@@ -74,6 +78,10 @@ class RegisterController extends Controller
             'bairro_user' => $data['bairro_user'],
             'local_trabalho' => $data['local_trabalho'],
             'instituicao_ensino' => $data['instituicao_ensino']
-        ])->toSQL();
+        ]);
     }
 }
+
+
+
+

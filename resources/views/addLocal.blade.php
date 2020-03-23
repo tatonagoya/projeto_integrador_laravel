@@ -38,12 +38,20 @@
 
             
             
-                <div class="form-group mt-5">
+            <div class="form-group col-md-6 col-sm-12">
+                <label for="imagem">Alterar Foto do Local</label>
+                <input type="file" name="imagem" class="form-control" id="imagem">
+            </div>
+
+
+
+
+                {{-- <div class="form-group mt-5">
                   <label for="exampleFormControlFile1">Adicionar Imagem</label>
                   <input type="file" class="form-control-file" id="exampleFormControlFile1">
                 </div>
             
-            
+             --}}
             
 
             <div>
@@ -158,7 +166,7 @@
 
 
 
-            <button type="submit" class="form-control btn btn-primary btn-block">Adicionar</button>
+            <button type="submit" class="form-control btn btn-dark btn-block">Adicionar</button>
         </form>
 
 

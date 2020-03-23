@@ -9,7 +9,9 @@
 
      
             <div class="flex my-4 col-md-6 col-lg-6 col-xl-6">
-                <img width="300px" src="{{ asset('img/quadra_ibirapuera.jpg')}}" alt="..." class="card-img">
+                <img width="300px" src="{{$local->imagem_image}}" alt="..." class="card-img">
+
+                
                 
             </div>
 
@@ -17,7 +19,7 @@
             <div class="col-md-6 col-lg-6 col-xl-6 mt-4">
 
                 <div class="flex" style="text-align: center;">
-                    <h2 style="color: white;">{{$locais->nome_local}}</h2>
+                    <h2 style="color: white;">{{$local->nome_local}}</h2>
                     <h5><a href="#" class="badge badge-secondary mt-2 mr-3"><i class="fas fa-user-plus"></i> Seguir</a></h5>
                 </div>
 
@@ -25,11 +27,11 @@
 
                     <ul class="list-unstyled col-md-12 col-lg-12 col-xl-12">
                         <li>
-                            <p style="color: white;">Bairro - {{$locais->bairro}}</p>
+                            <p style="color: white;">Bairro - {{$local->bairro}}</p>
                         </li>
 
                         <li>
-                            <p style="color: white;">Endereço - {{$locais->endereco}}</p>
+                            <p style="color: white;">Endereço - {{$local->endereco}}</p>
                         </li>
 
                     </ul>
@@ -46,15 +48,44 @@
                 
                 
                         <li class="nav-item mb-2">
-                            <a href="{{ route('editarLocal')}}" class="btn btn-primary btn-sm"><i class="far fa-edit"></i> Editar Local</a>
+                            <a href="/editarLocal/{{$local->id}}" class="btn btn-primary btn-sm"><i class="far fa-edit"></i> Editar Local</a>
                         </li>
 
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('addLocal')}}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Adicionar Local</a>
-                        </li>
+                        </li> --}}
 
-                    
+                        <li class="mr-3">
+                                        
+                            <h5><a href="#" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal{{ $local->id }}">
+                                <i class="fas fa-trash"></i> Apagar
+                            </a></h5>
+                            <div class="modal fade" id="modal{{ $local->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Deseja excluir o local {{ $local->nome_local }} ?</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Bairro: {{$local->bairro}} <br> Endereço: {{$local->endereco}}</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                            <form action="/exclui-local/{{ $local->id }}" method="POST">
+                                                @csrf
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="btn btn-danger">Excluir</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </li>
 
                     </ul>
                 

@@ -51,43 +51,83 @@
 
     <h2 style="text-align: center">Atualize o seu perfil!</h2>
 
-    <form class="center mt-4" method="POST" action="/filmes/altera-filme/{{$filme->id}}" enctype="multipart/form-data">
+    <form class="center mt-4" method="POST" action='/editarPerfil/{$user->id}' enctype="multipart/form-data">
         @csrf
-        {{ method_field('POST') }}
+        {{ method_field('PUT') }}
+        
+        <div class="form-group">
+            <label for="name" style="font-size: 18px;">Nome</label>
+            <input type="text" name="name" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+                value="{{ $user->name }}" id="name" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('name') }}</div>
+        </div>
 
         <div class="form-group">
-            <label for="inputAddress" style="font-size: 18px">Nome Completo</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Roberta Nascimento">
+            <label for="email" style="font-size: 18px">E-mail</label>
+            <input type="email" name="email" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            value="{{ $user->email }}" id="email" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('email') }}</div>
         </div>
+
+        <div class="form-group">
+            <label for="password" style="font-size: 18px">Senhas</label>
+            <input type="password" name="password" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            value="{{ $user->password }}" id="password" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('password') }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="bairro_user" style="font-size: 18px">Bairro</label>
+            <input type="text" name="bairro_user" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            value="{{ $user->bairro_user }}" id="bairro_user" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('bairro_user') }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="local_trabalho" style="font-size: 18px">Local de Trabalho</label>
+            <input type="text" name="local_trabalho" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            value="{{ $user->local_trabalho }}" id="local_trabalho" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('local_trabalho') }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="instituicao_ensino" style="font-size: 18px">Instituição de Ensino</label>
+            <input type="text" name="instituicao_ensino" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            value="{{ $user->instituicao_ensino }}" id="instituicao_ensino" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('instituicao_ensino') }}</div>
+        </div>
+
+
+
+
         {{-- <div class="form-group">
-            <label for="exampleFormControlSelect1" style="font-size: 18px">Gênero</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>Não-binário</option>
-              <option>Feminino</option>
-              <option>Masculino</option>
-            </select>
-          </div> --}}
+            <label for="inputAddress" style="font-size: 18px">Nome</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Quadra 01 Parque do Ibirapuera">
+          </div>
         <div class="form-group">
           <label for="inputAddress" style="font-size: 18px">Bairro</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Santana">
+          <input type="text" class="form-control" id="inputAddress" placeholder="Vila Mariana">
         </div>
         <div class="form-group">
-          <label for="inputAddress2" style="font-size: 18px">Local de Trabalho</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Nike">
-        </div>
-        <div class="form-group">
-            <label for="inputAddress2" style="font-size: 18px">Instituição de Estudo</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="PUC-SP">
-          </div>
-
+          <label for="inputAddress2" style="font-size: 18px">Endereço</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Av. Pedro Álvares Cabral">
+        </div> --}}
+       
         
-        
-            <div class="form-group mt-5">
-              <label for="exampleFormControlFile1">Alterar Foto de Perfil</label>
+            {{-- <div class="form-group mt-5">
+              <label for="exampleFormControlFile1">Alterar Foto do Local</label>
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div> --}}
+        
+
+
+            {{-- <div class="form-group col-md-6 col-sm-12">
+                <img class="w-100" src="{{ $perfil->imagem_image }}" alt="">
             </div>
-        
-        
+            <div class="form-group col-md-6 col-sm-12">
+                <label for="imagem">Alterar Foto de Perfil</label>
+                <input type="file" name="imagem" class="form-control" id="imagem">
+            </div> --}}
         
 
         <div>
