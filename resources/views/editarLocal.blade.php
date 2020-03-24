@@ -92,12 +92,12 @@
         
 
 
-            <div class="form-group col-md-6 col-sm-12">
-                <img class="w-100" src="{{ $local->imagem_image }}" alt="">
+            <div class="form-group mt-5">
+                <img class="w-70" src="{{ $local->imagem_image }}" alt="">
             </div>
-            <div class="form-group col-md-6 col-sm-12">
+            <div class="form-group">
                 <label for="imagem">Alterar Foto do Local</label>
-                <input type="file" name="imagem" class="form-control" id="imagem">
+                <input type="file" name="imagem" class="form-control pt-3 pb-5" id="imagem">
             </div>
         
 

@@ -38,9 +38,9 @@
 
             
             
-            <div class="form-group col-md-6 col-sm-12">
-                <label for="imagem">Alterar Foto do Local</label>
-                <input type="file" name="imagem" class="form-control" id="imagem">
+            <div class="form-group">
+                <label for="imagem" style="font-size: 18px">Alterar Foto do Local</label>
+                <input type="file" name="imagem" class="form-control pt-3 pb-5" id="imagem">
             </div>
 
 
