@@ -57,42 +57,51 @@
         
         <div class="form-group">
             <label for="name" style="font-size: 18px;">Nome</label>
-            <input type="text" name="name" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="name" class="form-control{{$errors->has('name') ? ' is-invalid':''}}" 
                 value="{{ $user->name }}" id="name" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('name') }}</div>
         </div>
 
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label for="email" style="font-size: 18px">E-mail</label>
-            <input type="email" name="email" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="email" name="email" class="form-control{{$errors->has('email') ? ' is-invalid':''}}" 
             value="{{ $user->email }}" id="email" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('email') }}</div>
-        </div>
+        </div> --}} --}}
 
         <div class="form-group">
-            <label for="password" style="font-size: 18px">Senhas</label>
-            <input type="password" name="password" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <label for="password" style="font-size: 18px">Senha</label>
+            <input type="password" name="password" class="form-control{{$errors->has('password') ? ' is-invalid':''}}" 
             value="{{ $user->password }}" id="password" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('password') }}</div>
         </div>
 
+
+        <div class="form-group">
+            <label for="password-confirm" style="font-size: 18px">Confirmar Senha</label>
+            <input type="password" name="password_confirmation" class="form-control{{$errors->has('password') ? ' is-invalid':''}}" 
+            value="{{ $user->password }}" id="password-confirm" placeholder="">
+            <div class="invalid-feedback">{{ $errors->first('password') }}</div>
+        </div>
+
+        
         <div class="form-group">
             <label for="bairro_user" style="font-size: 18px">Bairro</label>
-            <input type="text" name="bairro_user" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="bairro_user" class="form-control{{$errors->has('bairro_user') ? ' is-invalid':''}}" 
             value="{{ $user->bairro_user }}" id="bairro_user" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('bairro_user') }}</div>
         </div>
 
         <div class="form-group">
             <label for="local_trabalho" style="font-size: 18px">Local de Trabalho</label>
-            <input type="text" name="local_trabalho" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="local_trabalho" class="form-control{{$errors->has('local_grupo') ? ' is-invalid':''}}" 
             value="{{ $user->local_trabalho }}" id="local_trabalho" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('local_trabalho') }}</div>
         </div>
 
         <div class="form-group">
             <label for="instituicao_ensino" style="font-size: 18px">Instituição de Ensino</label>
-            <input type="text" name="instituicao_ensino" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="instituicao_ensino" class="form-control{{$errors->has('instituicao_ensino') ? ' is-invalid':''}}" 
             value="{{ $user->instituicao_ensino }}" id="instituicao_ensino" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('instituicao_ensino') }}</div>
         </div>

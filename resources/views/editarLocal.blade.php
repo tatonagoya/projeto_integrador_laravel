@@ -50,21 +50,21 @@
         
         <div class="form-group">
             <label for="nome_local" style="font-size: 18px;">Nome do Local</label>
-            <input type="text" name="nome_local" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="nome_local" class="form-control{{$errors->has('nome-local') ? ' is-invalid':''}}" 
                 value="{{ $local->nome_local }}" id="nome_local" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('nome_local') }}</div>
         </div>
 
         <div class="form-group">
             <label for="bairro" style="font-size: 18px">Bairro</label>
-            <input type="text" name="bairro" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="bairro" class="form-control{{$errors->has('bairro') ? ' is-invalid':''}}" 
             value="{{ $local->bairro }}" id="bairro" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('bairro') }}</div>
         </div>
 
         <div class="form-group">
             <label for="endereco" style="font-size: 18px">Endereço</label>
-            <input type="text" name="endereco" class="form-control{{$errors->has('titulo') ? ' is-invalid':''}}" 
+            <input type="text" name="endereco" class="form-control{{$errors->has('endereco') ? ' is-invalid':''}}" 
             value="{{ $local->endereco }}" id="endereco" placeholder="">
             <div class="invalid-feedback">{{ $errors->first('endereco') }}</div>
         </div>

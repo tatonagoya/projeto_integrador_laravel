@@ -155,7 +155,7 @@ class LocalController extends Controller
 
         $local->save();
 
-        return redirect('/listaLocais');
+        return redirect('/home');
 
         
     }

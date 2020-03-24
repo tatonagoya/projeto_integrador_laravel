@@ -23,9 +23,9 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     { 
+        
         // dd($request->all());
         // die;
-
     
         $user = User::find($id);
 
@@ -47,9 +47,12 @@ class UserController extends Controller
         $user->local_trabalho = $request->input('local_trabalho');
         $user->instituicao_ensino = $request->input('instituicao_ensino');
 
+        var_dump($user);
+        die;
+
         $user->save();
 
-        return redirect('/home');
+        return redirect('/editarPerfil');
     }
 
     
