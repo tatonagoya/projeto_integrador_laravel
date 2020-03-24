@@ -15,7 +15,7 @@
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-4">
 
             <div class="flex" style="text-align: center;">
-                <h3 style="color: white;"><b>Manuela Fernandez</b></h3>
+                <h3 style="color: white;"><b>{{$perfil->name}}</b></h3>
                 <h5><a href="#" class="badge badge-secondary mt-2 mr-3"><i class="fas fa-user-minus"></i> Deixar de Seguir</a></h5>
             </div>
 
@@ -23,15 +23,15 @@
 
                 <ul class="list-unstyled col-md-12 col-lg-12 col-xl-12">
                     <li>
-                        <p style="color: white;">Mora no bairro Vila Olímpia</p>
+                        <p style="color: white;">Mora no bairro {{$perfil->bairro_user}}</p>
                     </li>
 
                     <li>
-                        <p style="color: white;">Trabalha na empresa PMSP</p>
+                        <p style="color: white;">Trabalha na empresa {{$perfil->local_trabalho}}</p>
                     </li>
 
                     <li>
-                        <p style="color: white;">Estudou na instituição de ensino FAAP - Fundação Armando Alvares Penteado</p>
+                        <p style="color: white;">Estudou na instituição de ensino {{$perfil->instituicao_ensino}}</p>
                     </li>
 
                 </ul>
@@ -111,8 +111,8 @@
                 <img width="100px" src="{{ asset('img/avatar1.jpg')}}" class="mt-3 mb-3 ml-3 mr-3" alt="...">
                 <div class="media-body mt-2 mr-3">
     
-                    <p style="color: white;"><a href="{{ route('perfil') }}"><b>Manuela Fernandez</b></a> mostrou interesse em jogar
-                    <b>futebol</b> na <a href="{{ route('locais') }}"><b>Quadra 01 do Parque do Ibirapuera</b>!</a></p>
+                    <p style="color: white;"><a href="#"><b>Manuela Fernandez</b></a> mostrou interesse em jogar
+                    <b>futebol</b> na <a href="#"><b>Quadra 01 do Parque do Ibirapuera</b>!</a></p>
                     <ul class="list-unstyled container row" style="color: white;">
                         <li class="mr-3 mt-1" ><h6>Sábado, 22 de março - 14h</h6></li>
                         <li class="mr-3">
@@ -129,8 +129,8 @@
                 <img width="100px" src="{{ asset('img/avatar1.jpg')}}" class="mt-3 mb-3 ml-3 mr-3" alt="...">
                 <div class="media-body mt-2 mr-3">
     
-                    <p style="color: white;"><a href="{{ route('perfil') }}"><b>Manuela Fernandez</b></a> mostrou interesse em jogar
-                    <b>futebol</b> na <a href="{{ route('locais') }}"><b>Quadra 01 do Parque do Ibirapuera</b>!</a></p>
+                    <p style="color: white;"><a href="#"><b>Manuela Fernandez</b></a> mostrou interesse em jogar
+                    <b>futebol</b> na <a href="#"><b>Quadra 01 do Parque do Ibirapuera</b>!</a></p>
                     <ul class="list-unstyled container row" style="color: white;">
                         <li class="mr-3 mt-1" ><h6>Sábado, 22 de março - 14h</h6></li>
                         <li class="mr-3">
@@ -149,8 +149,8 @@
                 <img width="100px" src="{{ asset('img/avatar1.jpg')}}" class="mt-3 mb-3 ml-3 mr-3" alt="...">
                 <div class="media-body mt-2 mr-3">
     
-                    <p style="color: white;"><a href="{{ route('perfil') }}"><b>Manuela Fernandez</b></a> mostrou interesse em jogar
-                    <b>futebol</b> na <a href="{{ route('locais') }}"><b>Quadra 01 do Parque do Ibirapuera</b>!</a></p>
+                    <p style="color: white;"><a href="#"><b>Manuela Fernandez</b></a> mostrou interesse em jogar
+                    <b>futebol</b> na <a href="#"><b>Quadra 01 do Parque do Ibirapuera</b>!</a></p>
                     <ul class="list-unstyled container row" style="color: white;">
                         <li class="mr-3 mt-1" ><h6>Sábado, 22 de março - 14h</h6></li>
                         <li class="mr-3">

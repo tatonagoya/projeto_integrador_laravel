@@ -30,9 +30,14 @@ Route::get('/home', function () {
 })->name('home');
 
 
-Route::get('/perfil', function () {
-    return view('perfil');
-})->name('perfil');
+// Route::get('/perfil', function () {
+//     return view('perfil');
+// })->name('perfil');
+
+Route::get('/perfil/{id}', 'PerfilController@show');
+
+
+
 
 
 // Route::get('/listaLocais', function () {

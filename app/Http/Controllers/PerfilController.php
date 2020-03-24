@@ -3,63 +3,125 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Perfil;
-// use App\Genero;
+use App\User;
 
 class PerfilController extends Controller
 {
-      
-    //retornando formulario para editar filmes
-    public function edit($id){
-        $perfil = Perfil::find($id);
+    // listando filmes 
+    public function index()
+    {
+        $perfis = User::paginate(50);
 
-        // $generos = Genero::all();
-
-        return view('editarPerfil')->with([
-            'perfil' => $perfil
-            // , 
-            // 'generos' => $generos
-        ]);
+        return view('perfil')->with('perfis', $perfis);
     }
 
-    // alterando filme
-    public function update(Request $request, $id){
-        $request->validate([
-            'name' => 'required|min:3',
-            'bairro_user' => 'required|min:5',
-            'local_trabalho' => 'required|min:3',
-            'instituicao_ensino' => 'required|min:3'
-            // ,
-            // 'imagem' => 'nullable|min:2'
-        ]);
+    public function show($id, Request $request)
+    {
+        $perfis = User::paginate(50);
 
-        $perfil = Perfil::find($id);
+       
+       
+        return view('perfil', ['perfil' => User::findOrFail($id)])->with('perfis', $perfis);
+
+    }
+
+
+   
+
+    
+
+    // retornando formulario para criar filmes
+
+    public function create()
+    {
+        $perfis = User::all();
+
+        return view('home')->with('perfil', $perfis);
+    }
+
+    
+    // criando registro na tabela filmes
+    public function store(Request $request)
+    {
+        // $request->validate([
+        //     'nome_local' => 'required|min:10',
+        //     'bairro' => 'required|min:5',
+        //     'endereco' => 'required|min:10',
+        //     'imagem' => 'nullable|min:3'
+        // ]);
 
         // $arquivo = $request->file('imagem');
-
-        // if(empty($arquivo)){
-        //     $caminhoRelativo = $local->imagem;
+        
+        // if(empty($arquivo))
+        //{
+        //     $caminhoRelativo = null;
         // } else {
         //     $arquivo->storePublicly('uploads');
         //     $caminhoAbsoluto = public_path()."/storage/uploads";
         //     $nomeArquivo = $arquivo->getClientOriginalName();
         //     $caminhoRelativo = "storage/uploads/$nomeArquivo";
         //     $arquivo->move($caminhoAbsoluto, $nomeArquivo);
-        // }
+        //}
 
-        $perfil->name = $request->input('name');
-        $perfil->bairro_user = $request->input('bairro_user');
-        $perfil->local_trabalho = $request->input('local_trabalho');
-        $perfil->instituicao_ensino = $request->input('instituicao_ensino');
-        // $local->imagem = $caminhoRelativo;
+        User::create([
+            // 'nome_local' => $request->input('nome_local'),
+            // 'bairro' => $request->input('bairro'),
+            // 'endereco' => $request->input('endereco'),
+            // // ,
+            // // 'duracao' => $request->input('duracao'),
+            // 'imagem' => $caminhoRelativo
+            // // 'id_genero' => $request->input('genero')
+        ]);
 
-        $perfil->save();
-
-        return redirect('/editarPerfil');
+        return redirect('/home');
     }
 
 
+
+
+
+
     
+    public function edit($id)
+    {   
+        $perfis = User::find($id);
+        return view('perfil')->with(['perfil' => $perfis]);  
+        
+
+    }
+
+    public function update(Request $request, $id)
+    { 
+        
+        // dd($request->all());
+        // die;
+    
+        $perfis = User::find($id);
+
+        $request->validate([
+            'name' => 'required',
+            'password' => 'required|min:6|confirmed'
+           
+        ]);
+    
+
+        $user->name = $request->input('name');
+        
+        $user->password = bcrypt($request->input('password'));
+        $user->bairro_user = $request->input('bairro_user');
+        $user->local_trabalho = $request->input('local_trabalho');
+        $user->instituicao_ensino = $request->input('instituicao_ensino');
+
+        // var_dump($user);
+        // die;
+
+        $perfis->save();
+
+        return redirect('/home/' . $user->id);
+    }
+
+
+
 
 
 

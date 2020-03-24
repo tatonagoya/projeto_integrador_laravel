@@ -45,7 +45,7 @@ class LocalController extends Controller
         
 
         
-        return view('local', ['local' => Local::findOrfail($id)])->with('locais', $locais);
+        return view('local', ['local' => Local::findOrFail($id)])->with('locais', $locais);
 
        
         // return view('local')->with([

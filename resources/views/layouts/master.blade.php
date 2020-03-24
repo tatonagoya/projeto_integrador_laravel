@@ -313,12 +313,12 @@
                             
                                                 <img src="{{ asset('img/avatar_usuario.jpg')}}" class="card-img" alt="...">
                                                 <div class="card-body">
-                                                    <h6 class="card-title" style="color: black;"><b>Olá Roberta Nascimento</b></h6>
+                                                    <h6 class="card-title" style="color: black;"><b>{{Auth::user()->name}}</b></h6>
                                                     <p class="card-text" style="font-size: 12px; color: black;"><b>Bem-vinda ao Outdoor Esportes! Esse é um espaço para você se conectar com seus amigos 
                                                         e conhecer novas pessoas através do esporte! <br><br>Primeiro, selecione as atividades que deseja praticar, 
                                                         depois pesquise as pessoas e lugares que prefere seguir. Então é só receber as notificações em seu feed, 
                                                         escolher uma partida e começar a se exercitar!</b></p>
-                                                    <a href="/editarPerfil/{$user->id}" class="btn btn-dark btn-block" style="font-size: 12px;"><i class="fas fa-address-card"></i> Editar Perfil</a>
+                                                    <a href=/editarPerfil/{{Auth::user()->id}}" class="btn btn-dark btn-block" style="font-size: 12px;"><i class="fas fa-address-card"></i> Editar Perfil</a>
                                                 </div>
                             
 
@@ -844,8 +844,8 @@
 
                             <img src="{{ asset('img/avatar_usuario.jpg')}}" class="card-img" alt="...">
                             <div class="card-body">
-                                <h3 class="card-title" style="text-align: center;">Olá <b>Roberta Nascimento</b></h3>
-                                <p class="card-text mt-1" style="color: black; text-align: center;"><b>Bem-vinda ao Outdoor Esportes! Esse é um espaço para você se conectar com seus amigos 
+                                <h3 class="card-title" style="text-align: center;">Olá <b>{{Auth::user()->name}}</b></h3>
+                                <p class="card-text mt-1" style="color: black; text-align: center;"><b>Você está no Outdoor Esportes! Esse é um espaço para você se conectar com seus amigos 
                                     e conhecer novas pessoas através do esporte! <br><br>Primeiro, selecione as atividades que deseja praticar, 
                                     depois pesquise as pessoas e lugares que prefere seguir. Então é só receber as notificações em seu feed, 
                                     escolher uma partida e começar a se exercitar!</b></p>

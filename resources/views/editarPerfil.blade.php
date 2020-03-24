@@ -15,7 +15,7 @@
     <div class="col-md-6 col-lg-6 col-xl-6 mt-4">
 
         <div class="flex" style="text-align: center;">
-            <h3 style="color: white;"><b>Roberta Nascimento</b></h3>
+            <h3 style="color: white;"><b>{{Auth::user()->name}}</b></h3>
             
         </div>
 
@@ -23,15 +23,15 @@
 
             <ul class="list-unstyled col-md-12 col-lg-12 col-xl-12">
                 <li>
-                    <p style="color: white;">Mora no bairro Santana</p>
+                    <p style="color: white;">Mora no bairro {{Auth::user()->bairro_user}}</p>
                 </li>
 
                 <li>
-                    <p style="color: white;">Trabalha na empresa Nike</p>
+                    <p style="color: white;">Trabalha na empresa {{Auth::user()->local_trabalho}}</p>
                 </li>
 
                 <li>
-                    <p style="color: white;">Estudou na instituição de ensino PUC-SP</p>
+                    <p style="color: white;">Estudou na instituição de ensino {{Auth::user()->instituicao_ensino}}</p>
                 </li>
 
             </ul>
@@ -51,7 +51,7 @@
 
     <h2 style="text-align: center">Atualize o seu perfil!</h2>
 
-    <form class="center mt-4" method="POST" action='/editarPerfil/{$user->id}' enctype="multipart/form-data">
+    <form class="center mt-4" method="POST" action='/editarPerfil/{{$user->id}}' enctype="multipart/form-data">
         @csrf
         {{ method_field('PUT') }}
         
@@ -251,7 +251,7 @@
 
 
 
-        <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+        <button type="submit" class="btn btn-dark btn-block">Salvar</button>
     </form>
 
 

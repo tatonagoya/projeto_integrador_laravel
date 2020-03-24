@@ -13,6 +13,19 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
+
+    // public function show($id, Request $request){
+        
+    //     $user = User::paginate(50);
+
+
+    //     return view('perfil', ['user' => User::findOrfail($id)])->with('user', $user);
+
+    // }
+
+
+
+
     public function edit($id)
     {   
         $user = User::find($id);
@@ -31,28 +44,26 @@ class UserController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users',
-            // 'email' => 'email|required|unique:users,email,'.$this->segment(2),
-            'password' => 'required|min:6|confirmed',
-            'bairro_user' => 'nullable|min:5',
-            'local_trabalho' => 'nullable|min:3',
-            'instituicao_ensino' => 'nullable|min:3'
+            'password' => 'required|min:6|confirmed'
+           
         ]);
     
 
         $user->name = $request->input('name');
-        $user->email = $request->input('email');
+        
         $user->password = bcrypt($request->input('password'));
         $user->bairro_user = $request->input('bairro_user');
         $user->local_trabalho = $request->input('local_trabalho');
         $user->instituicao_ensino = $request->input('instituicao_ensino');
 
-        var_dump($user);
-        die;
+        // var_dump($user);
+        // die;
 
         $user->save();
 
-        return redirect('/editarPerfil');
+
+        return redirect('home');
+        // return redirect('/editarPerfil/' . $user->id);
     }
 
     
