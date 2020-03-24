@@ -18,31 +18,8 @@ class LocalController extends Controller
     public function show($id, Request $request){
         $locais = Local::
         
-        // find(id);
-        
-        paginate(50);
-
-       
-        // $request->validate([
-        //     'nome_local' => 'required|min:10',
-        //     'bairro' => 'required|min:5',
-        //     'endereco' => 'required|min:10',
-        //     'imagem' => 'nullable|min:2'
-        // ]);
-
-        // $local = Local::find($id);
-        // $arquivo = $request->file('imagem');
-    
-        // if(empty($arquivo)){
-        //     $caminhoRelativo = $local->imagem;
-        // } else {
-        //     $arquivo->storePublicly('uploads');
-        //     $caminhoAbsoluto = public_path()."/storage/uploads";
-        //     $nomeArquivo = $arquivo->getClientOriginalName();
-        //     $caminhoRelativo = "storage/uploads/$nomeArquivo";
-        //     $arquivo->move($caminhoAbsoluto, $nomeArquivo);
-        // }
-        
+               
+        paginate(50);    
 
         
         return view('local', ['local' => Local::findOrFail($id)])->with('locais', $locais);
@@ -59,7 +36,8 @@ class LocalController extends Controller
 
     // retornando formulario para criar filmes
 
-    public function create(){
+    public function create()
+    {
         $locais = Local::all();
 
         return view('addLocal')->with('locais', $locais);
@@ -135,6 +113,7 @@ class LocalController extends Controller
 
         $local = Local::find($id);
 
+        $request->all();
         $arquivo = $request->file('imagem');
 
         if(empty($arquivo)){
@@ -156,6 +135,12 @@ class LocalController extends Controller
         $local->save();
 
         return redirect('/listaLocais');
+
+
+
+
+
+
 
         
     }

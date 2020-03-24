@@ -311,7 +311,7 @@
 
                                             <div class="mt-4">
                             
-                                                <img src="{{ asset('img/avatar_usuario.jpg')}}" class="card-img" alt="...">
+                                                <img src="{{Auth::user()->imagem_image}}" class="card-img" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title" style="color: black;"><b>{{Auth::user()->name}}</b></h6>
                                                     <p class="card-text" style="font-size: 12px; color: black;"><b>Bem-vinda ao Outdoor Esportes! Esse é um espaço para você se conectar com seus amigos 
@@ -842,7 +842,7 @@
 
                         <div>
 
-                            <img src="{{ asset('img/avatar_usuario.jpg')}}" class="card-img" alt="...">
+                            <img src="{{Auth::user()->imagem_image}}" class="card-img" alt="...">
                             <div class="card-body">
                                 <h3 class="card-title" style="text-align: center;">Olá <b>{{Auth::user()->name}}</b></h3>
                                 <p class="card-text mt-1" style="color: black; text-align: center;"><b>Você está no Outdoor Esportes! Esse é um espaço para você se conectar com seus amigos 

@@ -99,6 +99,27 @@
                                 </div>
                             </div>
 
+
+
+
+                            <div class="form-group row">
+                                <label for="imagem" class="col-md-4 col-form-label text-md-right">{{ __('Adicionar Foto de Perfil') }}</label>
+
+                                <div class="col-md-6">
+                                    <input type="file" class="form-control" name="imagem" required autocomplete="imagem"
+                                    class="form-control{{$errors->has('imagem') ? ' is-invalid':''}}" 
+                                    value="{{ old('imagem') }}" id="imagem">
+                                </div>
+                            </div>
+
+
+
+
+                            {{-- <div class="form-group row">
+                                <label for="imagem" style="font-size: 18px">Alterar Foto do Local</label>
+                                <input type="file" name="imagem" class="form-control pt-3 pb-5" id="imagem">
+                            </div> --}}
+
                             
 
 

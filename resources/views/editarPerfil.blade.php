@@ -8,7 +8,7 @@
 
 
     <div class="flex my-4 col-md-6 col-lg-6 col-xl-6">
-        <img width="300px" src="{{ asset('img/avatar_usuario.jpg')}}" alt="..." class="card-img">
+        <img width="300px" src="{{Auth::user()->imagem_image}}" alt="..." class="card-img">
         
     </div>
 
@@ -128,7 +128,7 @@
               <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div> --}}
         
-
+  
 
             {{-- <div class="form-group col-md-6 col-sm-12">
                 <img class="w-100" src="{{ $perfil->imagem_image }}" alt="">

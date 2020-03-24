@@ -10,7 +10,7 @@
 
         <ul id="feed" class="list-unstyled">
             <li class="media" style="background-color: black" ;>
-                <img width="100px" src="{{ asset ('img/avatar1.jpg')}}" class="mt-3 mb-3 ml-3 mr-3" alt="...">
+                <img width="100px" src="{{$perfil->imagem_image}}" class="mt-3 mb-3 ml-3 mr-3" alt="...">
                 <div class="media-body mt-2 mr-3">
 
                     <p style="color: white;"><a href="/perfil/{{$perfil->id}}"><b>{{$perfil->name}}</b></a> mostrou interesse em jogar

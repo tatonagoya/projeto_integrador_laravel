@@ -6,7 +6,7 @@
 
     @if($locais->isEmpty())
 
-    <a href="{{ route('addLocal')}}" class="btn btn-primary btn-lg mb-5"><i class="fas fa-plus"></i> Adicionar Local</a>
+    <a href="{{ route('addLocal')}}" class="btn btn-dark btn-lg mb-5"><i class="fas fa-plus"></i> Adicionar Local</a>
         <div class="col-12">
             <h1 class="col-12 text-center">Nenhum Local Cadastrado!</h1>
         </div>
@@ -21,7 +21,7 @@
         <div id="local03">
 
 
-            <a href="{{ route('addLocal')}}" class="btn btn-primary btn-lg mb-5"><i class="fas fa-plus"></i> Adicionar Local</a>
+            <a href="{{ route('addLocal')}}" class="btn btn-dark btn-lg mb-5"><i class="fas fa-plus"></i> Adicionar Local</a>
             <h2 style="text-align: center;">Locais Cadastrados</h2>
         
             @foreach($locais as $local)

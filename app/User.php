@@ -17,10 +17,11 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $primaryKey = 'id';
+
+    // protected $table = 'users';
+    // protected $primaryKey = 'id';
     protected $fillable = [
-        'name', 'email', 'password', 'bairro_user', 'local_trabalho', 'instituicao_ensino'
-        // , 'imagem'
+        'name', 'email', 'password', 'bairro_user', 'local_trabalho', 'instituicao_ensino', 'imagem'
     ];
 
     /**
@@ -41,5 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
+    public function getImagemImgAttribute($value){
+        return $this->imagem == null ? asset('img/sem_imagem_perfil.jpg') : asset($this->imagem);
+    }
 }

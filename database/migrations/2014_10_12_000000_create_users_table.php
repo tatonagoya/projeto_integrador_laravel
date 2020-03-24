@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('bairro_user')->nullable();
             $table->string('local_trabalho')->nullable();
             $table->string('instituicao_ensino')->nullable();
-            // $table->string('imagem', 100)->nullable();
+            $table->string('imagem', 100)->nullable();
             $table->timestamps();
         });
     }
